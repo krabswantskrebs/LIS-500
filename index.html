@@ -2,33 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>welcome.html | TechEquity Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | LIS 500: Code and Power</title>
     <link rel="stylesheet" href="stylepage.css">
 </head>
 <body>
-    <nav>
-        <ul>
-        <li><a href="welcome.html">Home</a></li>
-            <li><a href="aboutme.html">About</a></li>
-            <li><a href="resources.html">Resources</a></li>
-            <li><a href="techhero.html">Tech Hero</a></li>
-        </ul>
-    </nav>
+
+    <header class="site-header">
+        <h1 class="main-title">LIS 500: Code and Power</h1>
+        <p class="main-subtitle">An intersectional examination of the Internet</p>
+
+        <nav class="button-nav" role="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutme.html">About Us</a></li>
+                <li><a href="resources.html">Resources for Implicit Bias</a></li>
+                <li><a href="techhero.html">Tech Hero</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main class="container">
-        <h1>TechEquity Splash Page</h1>
-        <p>First impressions: A look at inclusion in the digital age.</p>
-
-        <video controls>
-            <source src="intro.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-
-        <p>Learn more about our <a href="tech-hero.html">Tech Hero</a>.</p>
+        <section class="welcome-section">
+            <h2>Welcome</h2>
+            <p>Explore the intersections of technology, race, and power through our curated resources and profiles.</p>
+            
+            <video controls class="home-video">
+                <source src="intro.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 LIS 500</p>
+        <p>&copy; 2026 UW-Madison | LIS 500</p>
     </footer>
+
 </body>
 </html>
