@@ -1,56 +1,204 @@
-/* 1. Global Reset & Accessibility */
+/* 1. CSS Variables */
+:root {
+    --primary: #1a3a5c;
+    --accent: #8b2332;
+    --bg: #f8f6f3;
+    --text: #2c2c2c;
+    --card-bg: #ffffff;
+    --footer-bg: #1a3a5c;
+    --font-heading: Georgia, 'Times New Roman', serif;
+    --font-body: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 2. Global Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: sans-serif;
-    line-height: 1.5;
+    font-family: var(--font-body);
+    line-height: 1.7;
     margin: 0;
     padding: 0;
-    background-color: #ffffff;
+    background-color: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-/* 2. Navigation Style */
-nav {
-    background-color: #222;
-    padding: 10px;
+/* 3. Header */
+.site-header {
+    background-color: var(--primary);
+    color: #ffffff;
+    text-align: center;
+    padding: 2rem 1rem 0;
 }
 
-nav ul {
+.main-title {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    margin: 0 0 0.25rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+}
+
+.main-subtitle {
+    font-size: 1rem;
+    margin: 0 0 1.5rem;
+    opacity: 0.85;
+    font-style: italic;
+}
+
+/* 4. Navigation */
+nav.button-nav {
+    background-color: rgba(0, 0, 0, 0.15);
+    padding: 0.75rem 1rem;
+}
+
+nav.button-nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
 }
 
-nav li {
-    margin: 0 15px;
+nav.button-nav li {
+    margin: 0;
 }
 
-nav a {
-    color: white;
+nav.button-nav a {
+    color: #ffffff;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    transition: background-color 0.2s, text-decoration 0.2s;
+    display: inline-block;
 }
 
-/* 3. Layout Container (CSS-driven layout) */
-.container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    border: 1px solid #ddd;
+nav.button-nav a:hover,
+nav.button-nav a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
 
-/* 4. Media Styling */
-img, video {
+/* 5. Main Content Container */
+main.container {
+    max-width: 900px;
+    width: 100%;
+    margin: 2rem auto;
+    padding: 2rem 2.5rem;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    flex: 1;
+}
+
+/* 6. Typography */
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    color: var(--primary);
+}
+
+main h1 {
+    font-size: 1.8rem;
+    margin-top: 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary);
+    margin-bottom: 1.25rem;
+}
+
+main h2 {
+    font-size: 1.35rem;
+    margin-top: 1.75rem;
+    margin-bottom: 0.75rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* 7. Links */
+main a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    transition: text-decoration 0.2s;
+}
+
+main a:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* 8. Sections */
+main section {
+    padding-top: 1.25rem;
+    margin-top: 1.25rem;
+    border-top: 1px solid #e0dcd7;
+}
+
+main section:first-of-type {
+    border-top: none;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+/* 9. Media Styling */
+img, video, audio {
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 20px 0;
+    margin: 1.25rem 0;
 }
 
-/* 5. Footer */
+img {
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+video {
+    border-radius: 6px;
+}
+
+audio {
+    width: 100%;
+}
+
+/* 10. Footer */
 footer {
+    background-color: var(--footer-bg);
+    color: #ffffff;
     text-align: center;
-    font-size: 0.8rem;
-    padding: 20px;
-    background: #eee;
+    font-size: 0.85rem;
+    padding: 1.25rem 1rem;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* 11. Responsive */
+@media (max-width: 640px) {
+    .main-title {
+        font-size: 1.5rem;
+    }
+
+    main.container {
+        margin: 1rem;
+        padding: 1.5rem 1.25rem;
+    }
+
+    nav.button-nav a {
+        font-size: 0.85rem;
+        padding: 0.35rem 0.75rem;
+    }
 }
