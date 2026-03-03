@@ -6,7 +6,8 @@
     <title>Home | LIS 500: Code and Power</title>
     <link rel="stylesheet" href="stylepage.css">
 </head>
-<body>
+<body class="page-home">
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
 	<!-- site header -->
 
@@ -14,11 +15,13 @@
         <h1 class="main-title">LIS 500: Code and Power</h1>
         <p class="main-subtitle">An intersectional examination of the Internet</p>
 
+
 	<!-- navigation bar -->
 
-        <nav class="button-nav" role="navigation">
+
+        <nav class="button-nav" role="navigation" aria-label="Main navigation">
             <ul>
-                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="index.html" class="active" aria-current="page">Home</a></li>
                 <li><a href="aboutme.html">About Us</a></li>
                 <li><a href="resources.html">Resources</a></li>
                 <li><a href="techhero.html">Tech Hero</a></li>
@@ -28,7 +31,7 @@
 
 	<!-- welcome section with opening image -->
 
-    <main class="container">
+    <main class="container" id="main-content" tabindex="-1">
         <section class="welcome-section">
             <h2>Welcome</h2>
             <img src="LIS 500.png" alt="LIS 500: Code and Power banner">

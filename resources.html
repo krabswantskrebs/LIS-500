@@ -6,38 +6,97 @@
     <title>Resources | LIS 500: Code and Power</title>
     <link rel="stylesheet" href="stylepage.css">
 </head>
-<body>
+<body class="page-resources">
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
     <header class="site-header">
         <h1 class="main-title">LIS 500: Code and Power</h1>
         <p class="main-subtitle">An intersectional examination of the Internet</p>
 
-        <nav class="button-nav" role="navigation">
+        <nav class="button-nav" role="navigation" aria-label="Main navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="aboutme.html">About Us</a></li>
-                <li><a href="resources.html" class="active">Resources</a></li>
+                <li><a href="resources.html" class="active" aria-current="page">Resources</a></li>
                 <li><a href="techhero.html">Tech Hero</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="container">
+    <main class="container" id="main-content" tabindex="-1">
         <h1>Library Subject Guide: Implicit Bias</h1>
+<!-- Implicit Bias Test Information Block-->
+     <section class="resource-block">
+        <h2>1. The Implicit Association Test (IAT)</h2>
+        <p>The IAT is a tool developed by Harvard researchers to measure the strength of associations between concepts (e.g., race, gender) and evaluations (e.g., good, bad). It reveals biases that exist below our conscious awareness.</p>
+        
+        <div class="callout-box">
+            <strong>Try it yourself:</strong> 
+            <a href="https://implicit.harvard.edu/" target="_blank" class="btn-link">Take the Project Implicit Test</a>
+        </div>
+        
+        <h3>Critique & Context</h3>
+        <p>While the IAT is a landmark tool, it is important to remember it is a <em>snapshot</em>, not a permanent diagnosis. Scholars suggest using it as a starting point for self-reflection rather than a definitive measure of character.</p>
+    </section>
+<!-- Intersectionality defintion and resources -->
+   <section class="resource-block">
+        <h2>2. Intersectionality</h2>
+        <p>Coined by Professor Kimberlé Crenshaw, <strong>intersectionality</strong> describes how various social identities (race, class, gender, sexuality) overlap to create unique modes of discrimination or privilege.</p>
+        
+        
+        <!-- Video of Kimberlé Crenshaw giving lecture -->
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/akOe5-UsQ2o" title="Kimberlé Crenshaw's TED Talk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p class="caption"><em>Video: Kimberlé Crenshaw explains the urgency of intersectionality.</em></p>
+        </div>
+    </section>
+       <!-- Algortihimic Bias Resources with Joy Buolamwini -->     
+    <section class="resource-block">
+    <h2>3. The Coded Gaze: Algorithmic Bias</h2>
+    <p>
+        Computer scientist <strong>Joy Buolamwini</strong> discovered that facial recognition 
+        software often fails to detect dark-skinned faces accurately. This is much more than a glitch, as it reveals an example of "coded gaze" in which 
+        the bias of the programmers is revealed through the use of technologies.
+    </p>
 
-        <section>
-            <h2>Understanding the IBT</h2>
-            <p>The Implicit Association Test (IAT) measures attitudes and beliefs that people may be unwilling or unable to report.</p>
-            <a href="https://implicit.harvard.edu/" target="_blank">Take the Test</a>
-        </section>
 
-        <section>
-            <h2>Lecture: Intersectionality</h2>
-            <audio controls>
-                <source src="lecture.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
-        </section>
+        <!-- Video of Joy Buolamwini -->
+    <div class="video-container">
+        <iframe width="560" height="315" 
+            src="https://www.youtube.com/embed/UG_X_7g63rY" 
+            title="Joy Buolamwini: How I'm fighting bias in algorithms" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+        <p class="caption">
+            <em>Video: Joy Buolamwini demonstrates the "Coded Gaze" in facial recognition.</em>
+        </p>
+    </div>
+
+    <div class="callout-box accent">
+        <strong>The Power Shift:</strong> 
+        Buolamwini founded the 
+        <a href="https://www.ajl.org/" target="_blank">Algorithmic Justice League</a>. 
+        This organzation shows that code can be used as a tool for advocacy, not just oppression.
+    </div>
+
+           
+    <div class="further-reading">
+    <h3>Further Reading</h3>
+    <p>For a deeper exploration of the "Coded Gaze," read Joy Buolamwini's landmark book:</p>
+    
+    <blockquote class="book-cite">
+        <strong><em>Unmasking AI: My Mission to Protect What is Human in a World of Machines</em></strong> (2023)
+        <br> <!-- Link to read Joy Buolamwini's Book  -->
+        <a href="https://www.penguinrandomhouse.com/books/670356/unmasking-ai-by-dr-joy-buolamwini/" target="_blank" class="btn-link">Find this in a library near you</a>
+    </blockquote>
+</div>
+
+
+
+
+    </section>
     </main>
 
     <footer>
@@ -46,3 +105,11 @@
 
 </body>
 </html>
+
+
+
+
+
+
+
+
