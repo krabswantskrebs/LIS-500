@@ -214,21 +214,7 @@ footer p {
     margin: 20px 0;
     font-size: 0.95rem;
 }
-/* 11. Data Table */
- .data-table th, .data-table td {
-    border: 1px solid #ddd;
-    padding: 12px;
-    text-align: left;
-    }
 
-.data-table th {
-    background-color: #f8f9fa;
-    color: #c5050c; /* UW Red */
-    }
-
-.reflection {
-    border-left: 5px solid #28a745; /* Green for 'Action' */
-    background-color: #f0fff4;
-    }
 }
+
 
