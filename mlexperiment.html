@@ -61,8 +61,13 @@
                 </p>
 
                 <h3>The Technical Process</h3>
-                <p>For this experiment, we gathered a corpus of 300 original images. Each group member contributed 100 unique samples to ensure our training data was robust.</p>
-                <p>Working on the model itself was an iterative process. After uploading our three class folders into Google's Teachable Machine, we trained and stress-tested the classifier against images outside of our original corpus. We tweaked the balance of samples between classes and reran the training loop until the live predictions felt stable. We finally exported the trained model and wired it into this page with p5.js and ml5.</p>
+                <p>The first step of our project was data collection. This was one of the most important components, and was crucial to the model's performance. Each group member contributed 100 original samples, resulting in a dataset of around 300 images. The requirement to provide our own images made us think about what original data means and it can affect our model. Things like lighting, backgrounds, and camera angles needed to be varied to ensure that our model can identify the correct object in different scenarios. At first we thought that more data would lead to better results, but it became apparent that the quality and diversity of the data was just as important. The varied settings of the images we used were important to ensure that our model would be able to classify objects accurately in multiple settings. Not having data which is diverse can potentially lead to biases and inaccuracies in the model, which is why it is so important.</p>
+                <p>After creating our dataset, we used Teachable Machine to train our model. The process of training a model was simple to the user, since we just had to upload the pictures and provide labels. Behind the scenes, however, there was much more going on. The training process involved tuning weights in a neural network to capture patterns in the images based on the labels. This is another reason why diverse data was crucial, we want to ensure that the model is capturing what we actually want to capture, not some patterns in the background or setting. When testing the model, it was pretty accurate at classifying our inputs, but it did occasionally make mistakes. These mistakes were most apparent when we provided the model with situations that were unfamiliar to it. These errors show the limitations of these systems and how important it is to understand how and why they work.</p>
+                <p>One important thing we learned from this process was much the data can impact the machine learning models. Even minor discrepancies or imbalances in the dataset could lead to big differences in performance, or even cause the model to be more biased. This connects to some of the themes in <em>Unmasking AI</em>, like how biased or incomplete datasets can lead to biased outcomes. This project demonstrated how easily these issues can arise, and how important it is that the most used and widespread models also address these issues.</p>
+                <p>This experience gave us a firsthand understanding of how easily bias can be introduced during the data collection and labeling stages. When we chose which objects qualified as a "fruit" or which dog images were most representative of its category, we were making subjective decisions that directly shaped our model's behavior. These small, human-driven choices echo the much larger-scale decisions made by scientists at major AI companies, where the stakes are far higher and the impact on marginalized communities is well-documented. Our project, though small in scale, reinforced that intentionality at every step of the pipeline is essential for building more fair and accountable systems.</p>
+
+                <h3>Conclusion</h3>
+                <p>Our project served as a microcosm of the broader challenges Dr. Joy Buolamwini addresses in <em>Unmasking AI</em>. By deliberately constructing our own dataset and confronting the ethical and technical complexities of machine learning firsthand, we gained a deeper appreciation for the responsibility that comes with building AI systems. The coded gaze is not an abstract concept reserved for large-scale commercial models, it operates at every level, including our own small-scale experiments. Moving forward, we believe that ethical awareness, transparent data practices, and a commitment to diverse representation should be foundational to how all AI systems are designed, regardless of their scale.</p>
 
             </article>
         </section>
@@ -71,12 +76,6 @@
         <section class="resource-block">
             <h2>Machine Learning Activity: Teachable Machine</h2>
             
-            <div class="video-container">
-                 <!-- Finish --> 
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" title="Algorithm Demonstration" frameborder="0" allowfullscreen></iframe>
-                <p class="caption"><em>Demonstrating our custom-trained classifier in real-time.</em></p>
-            </div>
-
             <div class="callout-box accent">
                 <h3>Accessing the Data & Model</h3>
                 <p>Consistent with LIS values of transparency, our dataset and model are open-source:</p>
